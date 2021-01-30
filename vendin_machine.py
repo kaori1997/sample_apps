@@ -36,20 +36,6 @@ class DrinkItem:
     def get_total_price(self, count):
         total_price = self.price * count
 
-
-drink_item1 = DrinkItem('水', 100)
-drink_item2 = DrinkItem('コーヒー', 120)
-drink_item3 = DrinkItem('お茶', 150)
-drink_item4 = DrinkItem('オレンジジュース', 160)
-
-drink_items = [drink_item1, drink_item2, drink_item3, drink_item4]
-
-
-
-
-
-
-
 def buydrink():
     a = int(input("お好きなドリンクの番号を入力して下さい＞"))
     if a == 0 or 1 or 2 or 3:
@@ -76,18 +62,12 @@ def buydrink():
                             print(str(price - (d + c)) + "円足りません")
                             d = d + c
 
-
-
-
-
                 break
             except ValueError:
                 print("数字を入力して下さい")
 
     else:
         print("該当商品がございません")
-
-
 
 def keepbuying():
     while True:
@@ -100,6 +80,13 @@ def keepbuying():
             return "end"
         else:
             print("「はい」または「いいえ」とお答え下さい")
+
+drink_item1 = DrinkItem('水', 100)
+drink_item2 = DrinkItem('コーヒー', 120)
+drink_item3 = DrinkItem('お茶', 150)
+drink_item4 = DrinkItem('オレンジジュース', 160)
+
+drink_items = [drink_item1, drink_item2, drink_item3, drink_item4]
 
 endflug = None
 while endflug == None:
